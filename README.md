@@ -58,16 +58,26 @@ The application is planned around three main components:
 - Added `requirements.txt` and `.gitignore`.
 - Initialized Git and connected the project to GitHub.
 - Created the initial Git commit and pushed it to GitHub.
+- Created the initial project README.
+
+### Day 2 — PDF Extraction & Text Preprocessing
+
+- Installed PyMuPDF for PDF text extraction.
+- Implemented PDF text extraction using PyMuPDF.
+- Added support for extracting text from multiple pages.
+- Created a text preprocessing module.
+- Implemented whitespace normalization to clean extracted text.
+- Tested the extraction and preprocessing pipeline using a sample resume.
 
 ### Upcoming Development
 
-- PDF resume text extraction.
-- Text preprocessing.
 - Resume and job description analysis.
-- NLP and ML-based matching.
+- NLP-based text processing.
+- Resume-to-job matching.
+- Matching score calculation.
 - Frontend development.
 - Testing and deployment.
 
 ## Project Status
 
-Currently in the initial development stage. Core resume analysis functionality is yet to be implemented.
+The initial setup is complete, and PDF text extraction and basic text preprocessing have been implemented. Resume analysis and matching functionality are currently under development.
