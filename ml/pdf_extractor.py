@@ -2,10 +2,10 @@ import pymupdf
 
 
 def extract_text_from_pdf(pdf_path):
-    text = ""
+    text_parts = []
 
     with pymupdf.open(pdf_path) as doc:
         for page in doc:
-            text += page.get_text()
+            text_parts.append(page.get_text())
 
-    return text
+    return "\n".join(text_parts)
