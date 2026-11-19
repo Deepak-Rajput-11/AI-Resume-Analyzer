@@ -1,0 +1,18 @@
+SKILLS = [
+    "Python",
+    "C++",
+    "Java",
+    "JavaScript",
+    "Flask",
+    "Django",
+    "SQL",
+    "MySQL",
+    "Git",
+    "Docker",
+    "Pandas",
+    "NumPy",
+    "Machine Learning",
+    "Deep Learning",
+    "HTML",
+    "CSS",
+]

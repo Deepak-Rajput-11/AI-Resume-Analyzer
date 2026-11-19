@@ -69,6 +69,16 @@ The application is planned around three main components:
 - Implemented whitespace normalization to clean extracted text.
 - Tested the extraction and preprocessing pipeline using a sample resume.
 
+**### Day 3 — Skill Extraction & Matching**
+
+- Implemented job description preprocessing.
+- Created a keyword-based skill extraction module.
+- Created a centralized skill collection for reusable skill detection.
+- Implemented skill matching between resume and job description skills.
+- Added identification of matching and missing skills.
+- Implemented skill match percentage calculation.
+- Created and executed tests for skill extraction and skill matching.
+
 ### Upcoming Development
 
 - Resume and job description analysis.
@@ -78,6 +88,6 @@ The application is planned around three main components:
 - Frontend development.
 - Testing and deployment.
 
-## Project Status
+**## Project Status**
 
-The initial setup is complete, and PDF text extraction and basic text preprocessing have been implemented. Resume analysis and matching functionality are currently under development.
+The initial setup, PDF text extraction, basic text preprocessing, skill extraction, and skill matching functionality have been implemented. Resume-to-job relevance analysis and further NLP/ML functionality are currently under development.
