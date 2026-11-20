@@ -1,10 +1,12 @@
 from ml.skill_extractor import extract_skills
-from ml.skills import SKILLS
 
 text = """
-I have experience in Python, Flask, SQL and Pandas.
+I work with Python, Flask, SQL and C++.
+I also have experience with NoSQL databases.
 """
 
-result = extract_skills(text, SKILLS)
+skills = ["Python", "Flask", "SQL", "C++", "C"]
+
+result = extract_skills(text, skills)
 
 print("Extracted Skills:", result)

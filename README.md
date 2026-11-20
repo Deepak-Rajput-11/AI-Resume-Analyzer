@@ -79,6 +79,16 @@ The application is planned around three main components:
 - Implemented skill match percentage calculation.
 - Created and executed tests for skill extraction and skill matching.
 
+**### Day 4 — Analysis Pipeline & Input Validation**
+
+- Created a central analysis module to coordinate existing processing components.
+- Integrated resume PDF extraction and text preprocessing.
+- Integrated job description processing and skill extraction.
+- Implemented combined resume and job description skill analysis.
+- Improved skill extraction accuracy using regular expressions and word boundaries.
+- Added input validation for missing resume paths, nonexistent PDF files, and empty job descriptions.
+- Tested the complete analysis pipeline and validation cases successfully.
+
 ### Upcoming Development
 
 - Resume and job description analysis.
@@ -90,4 +100,4 @@ The application is planned around three main components:
 
 **## Project Status**
 
-The initial setup, PDF text extraction, basic text preprocessing, skill extraction, and skill matching functionality have been implemented. Resume-to-job relevance analysis and further NLP/ML functionality are currently under development.
+The initial setup, PDF text extraction, text preprocessing, skill extraction, skill matching, and integrated analysis pipeline have been implemented. Input validation is also in place. Advanced NLP/ML-based resume relevance analysis and frontend development are currently under development.
