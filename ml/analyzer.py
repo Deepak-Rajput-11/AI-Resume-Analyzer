@@ -5,6 +5,7 @@ from ml.jd_processor import process_job_description
 from ml.skill_extractor import extract_skills
 from ml.skills import SKILLS
 from ml.skill_matcher import compare_skills, calculate_match_percentage
+from ml.text_similarity import calculate_text_similarity
 
 
 def analyze_resume(resume_pdf_path, jd_text):
@@ -25,6 +26,9 @@ def analyze_resume(resume_pdf_path, jd_text):
     # Process job description
     cleaned_jd = process_job_description(jd_text)
 
+    # Calculate text similarity
+    text_similarity = calculate_text_similarity(cleaned_resume, cleaned_jd)
+
     # Extract skills from both inputs
     resume_skills = extract_skills(cleaned_resume, SKILLS)
     jd_skills = extract_skills(cleaned_jd, SKILLS)
@@ -41,4 +45,5 @@ def analyze_resume(resume_pdf_path, jd_text):
         "matching_skills": matching_skills,
         "missing_skills": missing_skills,
         "match_percentage": match_percentage,
+        "text_similarity": text_similarity,
     }

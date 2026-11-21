@@ -89,6 +89,15 @@ The application is planned around three main components:
 - Added input validation for missing resume paths, nonexistent PDF files, and empty job descriptions.
 - Tested the complete analysis pipeline and validation cases successfully.
 
+
+### Day 5 — TF-IDF & Text Similarity
+- Installed Scikit-learn for NLP-based text similarity analysis.
+- Implemented TF-IDF vectorization to convert resume and job description text into numerical representations.
+- Implemented cosine similarity to measure textual similarity between documents.
+- Created a dedicated text similarity module.
+- Integrated text similarity calculation into the central resume analysis pipeline.
+- Tested the complete analyzer with both skill matching and text similarity calculations.
+
 ### Upcoming Development
 
 - Resume and job description analysis.
@@ -100,4 +109,6 @@ The application is planned around three main components:
 
 **## Project Status**
 
-The initial setup, PDF text extraction, text preprocessing, skill extraction, skill matching, and integrated analysis pipeline have been implemented. Input validation is also in place. Advanced NLP/ML-based resume relevance analysis and frontend development are currently under development.
+
+The project currently supports PDF text extraction, text preprocessing, keyword-based skill extraction, skill matching, input validation, and TF-IDF-based text similarity analysis. Further NLP/ML improvements and frontend development are in progress.
+
