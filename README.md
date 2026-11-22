@@ -6,44 +6,43 @@ An NLP and Machine Learning-powered application that analyzes resumes against jo
 
 AI Resume Analyzer aims to help job seekers evaluate how well their resumes match a particular job description.
 
-The application will extract information from PDF resumes, analyze job requirements, identify matching and missing skills, and provide an overall relevance score with improvement suggestions.
+The application extracts text from PDF resumes, processes job requirements, identifies matching and missing skills, and calculates resume-to-job relevance scores.
 
-The goal is to go beyond basic keyword matching by exploring both traditional NLP techniques and semantic similarity.
+The project combines traditional NLP techniques and semantic similarity to go beyond basic keyword matching.
 
 ## Planned Features
 
 - Upload resumes in PDF format.
-- Extract text and relevant information from resumes.
-- Analyze job descriptions.
+- Extract text from resumes.
+- Process and analyze job descriptions.
 - Identify matching and missing skills.
 - Calculate resume-to-job relevance scores.
-- Use NLP and ML techniques for text analysis.
+- Use NLP and ML techniques for text similarity analysis.
 - Generate suggestions for improving resume relevance.
+- Present analysis results through a user-friendly interface.
 
-**Note:** These are planned features. They will be implemented progressively during development.
+**Note:** Features are being implemented progressively during development.
 
 ## Technology Stack
 
-| Technology            | Purpose                         |
-| --------------------- | ------------------------------- |
-| Python                | Core programming language       |
-| Flask                 | Backend framework               |
-| HTML, CSS, JavaScript | Frontend                        |
-| PyMuPDF               | PDF text extraction             |
-| Pandas & NumPy        | Data processing                 |
-| NLTK                  | NLP and text preprocessing      |
-| Scikit-learn          | TF-IDF and traditional ML tools |
-| Sentence Transformers | Semantic text embeddings        |
-| Pytest                | Testing                         |
-| Git & GitHub          | Version control                 |
+| Technology            | Purpose                                    |
+| --------------------- | ------------------------------------------ |
+| Python                | Core programming language                  |
+| Flask                 | Backend framework                          |
+| HTML, CSS, JavaScript | Frontend development                       |
+| PyMuPDF               | PDF text extraction                        |
+| Scikit-learn          | TF-IDF vectorization and cosine similarity |
+| Sentence Transformers | Semantic embeddings and similarity         |
+| Pytest                | Testing                                    |
+| Git & GitHub          | Version control                            |
 
 ## Project Architecture
 
-The application is planned around three main components:
+The application is organized around three main components:
 
-1. **Frontend:** Handles resume uploads, job description input and result presentation.
-2. **Backend:** Handles requests, file processing and communication between components.
-3. **NLP/ML Engine:** Processes resume and job description text and performs matching analysis.
+1. **Frontend:** Handles resume uploads, job description input, and result presentation.
+2. **Backend:** Handles application requests, file processing, and communication between components.
+3. **NLP/ML Engine:** Processes resume and job description text and performs matching and similarity analysis.
 
 ## Development Progress
 
@@ -69,7 +68,7 @@ The application is planned around three main components:
 - Implemented whitespace normalization to clean extracted text.
 - Tested the extraction and preprocessing pipeline using a sample resume.
 
-**### Day 3 — Skill Extraction & Matching**
+### Day 3 — Skill Extraction & Matching
 
 - Implemented job description preprocessing.
 - Created a keyword-based skill extraction module.
@@ -79,7 +78,7 @@ The application is planned around three main components:
 - Implemented skill match percentage calculation.
 - Created and executed tests for skill extraction and skill matching.
 
-**### Day 4 — Analysis Pipeline & Input Validation**
+### Day 4 — Analysis Pipeline & Input Validation
 
 - Created a central analysis module to coordinate existing processing components.
 - Integrated resume PDF extraction and text preprocessing.
@@ -89,8 +88,8 @@ The application is planned around three main components:
 - Added input validation for missing resume paths, nonexistent PDF files, and empty job descriptions.
 - Tested the complete analysis pipeline and validation cases successfully.
 
-
 ### Day 5 — TF-IDF & Text Similarity
+
 - Installed Scikit-learn for NLP-based text similarity analysis.
 - Implemented TF-IDF vectorization to convert resume and job description text into numerical representations.
 - Implemented cosine similarity to measure textual similarity between documents.
@@ -98,17 +97,27 @@ The application is planned around three main components:
 - Integrated text similarity calculation into the central resume analysis pipeline.
 - Tested the complete analyzer with both skill matching and text similarity calculations.
 
-### Upcoming Development
+### Day 6 — Semantic Similarity with Sentence Transformers
 
-- Resume and job description analysis.
-- NLP-based text processing.
-- Resume-to-job matching.
-- Matching score calculation.
-- Frontend development.
-- Testing and deployment.
+- Installed Sentence Transformers for semantic text analysis.
+- Explored sentence embeddings and their role in understanding textual meaning.
+- Integrated the pretrained `all-MiniLM-L6-v2` model.
+- Implemented semantic similarity using sentence embeddings and cosine similarity.
+- Created a dedicated semantic similarity module.
+- Integrated semantic similarity into the central resume analysis pipeline.
+- Tested the complete analyzer with skill matching, TF-IDF similarity, and semantic similarity.
 
-**## Project Status**
+## Upcoming Development
 
+- Develop the Flask backend functionality for resume uploads and job description input.
+- Build the frontend interface.
+- Display resume analysis results.
+- Generate resume improvement suggestions.
+- Perform application testing and debugging.
+- Deploy the application.
 
-The project currently supports PDF text extraction, text preprocessing, keyword-based skill extraction, skill matching, input validation, and TF-IDF-based text similarity analysis. Further NLP/ML improvements and frontend development are in progress.
+## Project Status
 
+The project currently supports PDF text extraction, text preprocessing, keyword-based skill extraction, skill matching, input validation, TF-IDF-based text similarity, and semantic similarity using Sentence Transformers.
+
+The central analysis pipeline integrates these components and has been tested successfully. Backend application functionality, frontend development, and deployment are the next stages of development.

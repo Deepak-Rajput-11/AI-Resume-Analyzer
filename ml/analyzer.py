@@ -6,6 +6,7 @@ from ml.skill_extractor import extract_skills
 from ml.skills import SKILLS
 from ml.skill_matcher import compare_skills, calculate_match_percentage
 from ml.text_similarity import calculate_text_similarity
+from ml.semantic_similarity import calculate_semantic_similarity
 
 
 def analyze_resume(resume_pdf_path, jd_text):
@@ -29,6 +30,9 @@ def analyze_resume(resume_pdf_path, jd_text):
     # Calculate text similarity
     text_similarity = calculate_text_similarity(cleaned_resume, cleaned_jd)
 
+    # Calculate semantic similarity
+    semantic_similarity = calculate_semantic_similarity(cleaned_resume, cleaned_jd)
+
     # Extract skills from both inputs
     resume_skills = extract_skills(cleaned_resume, SKILLS)
     jd_skills = extract_skills(cleaned_jd, SKILLS)
@@ -46,4 +50,5 @@ def analyze_resume(resume_pdf_path, jd_text):
         "missing_skills": missing_skills,
         "match_percentage": match_percentage,
         "text_similarity": text_similarity,
+        "semantic_similarity": semantic_similarity,
     }
