@@ -107,6 +107,15 @@ The application is organized around three main components:
 - Integrated semantic similarity into the central resume analysis pipeline.
 - Tested the complete analyzer with skill matching, TF-IDF similarity, and semantic similarity.
 
+### Day 7 — Flask Backend & Request Handling
+
+- Reviewed the existing Flask application structure.
+- Explored Flask routes and HTTP POST requests.
+- Created an `/analyze` POST route to receive resume uploads and job description text.
+- Used Flask's `request.files` to retrieve uploaded resume files.
+- Used Flask's `request.form` to retrieve job description input.
+- Introduced the connection between Flask routes and the central resume analyzer.
+
 ## Upcoming Development
 
 - Develop the Flask backend functionality for resume uploads and job description input.
