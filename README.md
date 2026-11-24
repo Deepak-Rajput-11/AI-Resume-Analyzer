@@ -116,6 +116,17 @@ The application is organized around three main components:
 - Used Flask's `request.form` to retrieve job description input.
 - Introduced the connection between Flask routes and the central resume analyzer.
 
+### Day 8 — Flask Backend Integration
+
+- Implemented temporary PDF file handling for uploaded resumes.
+- Connected the Flask `/analyze` POST route to the central `analyze_resume()` function.
+- Integrated resume upload and job description input handling.
+- Implemented temporary file cleanup after analysis.
+- Returned analysis results as JSON responses.
+- Installed Requests for backend route testing.
+- Created a Flask route test to submit PDF resumes and job descriptions.
+- Successfully tested the complete Flask-to-analyzer workflow.
+
 ## Upcoming Development
 
 - Develop the Flask backend functionality for resume uploads and job description input.

@@ -1,3 +1,6 @@
+import tempfile
+import os
+
 from flask import Flask, request
 from ml.analyzer import analyze_resume
 
@@ -15,9 +18,16 @@ def analyze():
     jd_text = request.form.get("jd_text")
 
     if not resume or not jd_text:
-    return "Resume and job description are required!", 400
+        return "Resume and job description are required!", 400
 
-    results = analyze_resume(resume, jd_text)
+    with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as temp_file:
+        resume.save(temp_file.name)
+        resume_path = temp_file.name
+
+    try:
+        results = analyze_resume(resume_path, jd_text)
+    finally:
+        os.remove(resume_path)
 
     return results
 
