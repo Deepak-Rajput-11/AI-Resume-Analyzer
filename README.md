@@ -127,6 +127,17 @@ The application is organized around three main components:
 - Created a Flask route test to submit PDF resumes and job descriptions.
 - Successfully tested the complete Flask-to-analyzer workflow.
 
+### Day 9 — Backend Validation & Error Handling
+
+- Added validation for missing resume and job description inputs.
+- Implemented uploaded filename validation.
+- Restricted resume uploads to PDF file extensions.
+- Added empty-file validation.
+- Implemented exception handling for unexpected resume analysis errors.
+- Ensured temporary uploaded files are cleaned up after analysis.
+- Created and executed tests for invalid backend inputs using Flask's test client.
+- Successfully tested missing resume, missing job description, non-PDF uploads, and empty files.
+
 ## Upcoming Development
 
 - Develop the Flask backend functionality for resume uploads and job description input.
