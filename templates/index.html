@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Resume Analyzer</title>
+  </head>
+  <body>
+    <h1>AI Resume Analyzer</h1>
+    <p>Compare your resume with a job description.</p>
+
+    <form>
+      <label for="resume">Upload Resume (PDF):</label>
+      <input type="file" id="resume" name="resume" accept=".pdf" />
+
+      <br /><br />
+
+      <label for="jd_text">Job Description:</label>
+      <textarea id="jd_text" name="jd_text" rows="10" cols="50"></textarea>
+      <br /><br />
+
+      <button type="submit">Analyze Resume</button>
+    </form>
+
+    <div id="results"></div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
