@@ -138,6 +138,20 @@ The application is organized around three main components:
 - Created and executed tests for invalid backend inputs using Flask's test client.
 - Successfully tested missing resume, missing job description, non-PDF uploads, and empty files.
 
+### Day 10 — Frontend Integration
+
+- Created the HTML frontend form for uploading resumes and entering job descriptions.
+- Connected the frontend with the Flask backend using JavaScript and Fetch API.
+- Used FormData to send the resume PDF and job description to the `/analyze` endpoint.
+- Received the backend response as JSON.
+- Displayed the analysis results on the webpage:
+  - Skill Match Percentage
+  - Text Similarity
+  - Semantic Similarity
+  - Matching Skills
+  - Missing Skills
+- Successfully tested frontend-to-backend integration.
+
 ## Upcoming Development
 
 - Develop the Flask backend functionality for resume uploads and job description input.
