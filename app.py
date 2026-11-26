@@ -1,7 +1,7 @@
 import tempfile
 import os
 
-from flask import Flask, request
+from flask import Flask, request, render_template
 from ml.analyzer import analyze_resume
 
 app = Flask(__name__)
@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "AI Resume Analyzer is running!"
+    return render_template("index.html")
 
 
 @app.route("/analyze", methods=["POST"])
@@ -26,8 +26,10 @@ def analyze():
     if not resume.filename.lower().endswith(".pdf"):
         return "Only PDF files are allowed!", 400
 
-    if resume.content_length == 0:
+    if not resume.read(1):
         return "Uploaded file is empty!", 400
+
+    resume.seek(0)
 
     with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as temp_file:
         resume.save(temp_file.name)
