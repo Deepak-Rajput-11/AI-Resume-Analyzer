@@ -152,6 +152,15 @@ The application is organized around three main components:
   - Missing Skills
 - Successfully tested frontend-to-backend integration.
 
+### Day 11 — Frontend Styling
+
+- Connected the frontend with a CSS stylesheet.
+- Styled the page background, form container, labels, textarea and button.
+- Added hover styling to the Analyze Resume button.
+- Styled the analysis results container.
+- Improved the readability and layout of the displayed analysis results.
+- Tested the UI successfully in the browser.
+
 ## Upcoming Development
 
 - Develop the Flask backend functionality for resume uploads and job description input.
