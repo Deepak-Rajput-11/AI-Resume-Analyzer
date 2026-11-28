@@ -161,6 +161,15 @@ The application is organized around three main components:
 - Improved the readability and layout of the displayed analysis results.
 - Tested the UI successfully in the browser.
 
+### Day 12 — Frontend Validation and Error Handling
+
+- Added frontend validation to check whether a resume is uploaded.
+- Added validation to ensure the job description is not empty or whitespace-only.
+- Prevented form submission when required inputs are missing.
+- Added frontend handling for unsuccessful backend HTTP responses.
+- Displayed backend error messages directly in the results section.
+- Successfully tested frontend validation and normal analysis flow.
+
 ## Upcoming Development
 
 - Develop the Flask backend functionality for resume uploads and job description input.
